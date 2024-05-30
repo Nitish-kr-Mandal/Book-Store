@@ -5,6 +5,7 @@ import Courses from './Courses/Courses'
 import Signup from './components/Signup'
 import Login from './components/Login'
 import ContactUs from './ContactUs/ContactUs'
+import About from './About/About'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='/login' element={<Login/>} />
         <Route path='/signup' element={<Signup/>} />
         <Route path='/contact' element={<ContactUs/>} />
+        <Route path='/about' element={<About/>} />
       </Routes>
      </div>
    </>

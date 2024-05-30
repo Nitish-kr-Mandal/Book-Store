@@ -1,14 +1,14 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import Contact from '../components/Contact'
+import Aboutus from '../components/Aboutus'
 
-function ContactUs() {
+function About() {
   return (
     <>
         <Navbar/>
-        <Contact/>
+        <Aboutus/>
     </>
   )
 }
 
-export default ContactUs
+export default About

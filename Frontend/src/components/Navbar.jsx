@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Login from './Login';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
@@ -49,7 +48,7 @@ function Navbar() {
         <a href='contact'>Contact</a>
       </li>
       <li>
-        <a>About</a>
+        <a href='about'>About</a>
       </li>
      </>
     )
