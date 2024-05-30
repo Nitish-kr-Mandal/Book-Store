@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Login from './Login'
 import { useForm } from "react-hook-form"
 
 function Signup() {
@@ -67,10 +66,8 @@ function Signup() {
                 <div className='flex justify-around mt-4'>
                     <button className=' bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 cursor-pointer'>signup</button>
                     <p>Have account? 
-                        <button 
-                         onClick={() => document.getElementById("my_modal").showModal()}
-                        className=' underline text-blue-600 cursor-pointer'> Login </button>
-                        <Login/>
+                        <Link to={"/login"}
+                        className=' underline text-blue-600 cursor-pointer'> Login </Link>
                         </p>
                 </div> 
                </form>  

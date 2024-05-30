@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Login from './Login';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
 
@@ -110,10 +111,9 @@ function Navbar() {
 </label>
   </div>
   <div className=' mx-2'>
-    <a className=" bg-black text-white px-3 py-2 rounded-md hover:bg-slate-700 cursor-pointer"
-    onClick={() => document.getElementById("my_modal").showModal()}
-    >Login</a>
-    <Login/>
+    <Link to={"/login"}
+    className=" bg-black text-white px-3 py-2 rounded-md hover:bg-slate-700 cursor-pointer"
+    >Login</Link>
     </div>
 </div>
 </div>

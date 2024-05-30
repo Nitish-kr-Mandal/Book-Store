@@ -15,8 +15,8 @@ function Login() {
 
   return (
     <>
-     <div>
-        <dialog id="my_modal" className="modal">
+     <div className=' flex justify-center items-center h-screen'>
+        <div className='w-[600px]'>
             <div className="modal-box dark:bg-slate-900 dark:text-white">
                 <form  onSubmit={handleSubmit(onSubmit)}
                  method="dialog" >
@@ -64,7 +64,7 @@ function Login() {
                 </div> 
                 </form>  
             </div>
-        </dialog>
+        </div>
         </div>
     </>
   )
