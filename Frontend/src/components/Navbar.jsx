@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
+import Logout from './Logout';
+import { useAuth } from '../context/AuthProvider';
 
 function Navbar() {
+  const [authUser,setAuthUser] = useAuth()
+
 
   const [theme,setTheme] = useState(() => {
     return localStorage.getItem("theme") || "light"
@@ -109,11 +113,14 @@ function Navbar() {
   
 </label>
   </div>
-  <div className=' mx-2'>
-    <Link to={"/login"}
-    className=" bg-black text-white px-3 py-2 rounded-md hover:bg-slate-700 cursor-pointer"
-    >Login</Link>
-    </div>
+  {
+    authUser ? <Logout/> :
+    <div className=' mx-2'>
+      <Link to={"/login"}
+      className=" bg-black text-white px-3 py-2 rounded-md hover:bg-slate-700 cursor-pointer"
+      >Login</Link>
+      </div>
+  }
 </div>
 </div>
     </div>
