@@ -6,6 +6,8 @@ import Signup from './components/Signup'
 import Login from './components/Login'
 import ContactUs from './ContactUs/ContactUs'
 import About from './About/About'
+import { Toaster } from 'react-hot-toast'
+
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
         <Route path='/contact' element={<ContactUs/>} />
         <Route path='/about' element={<About/>} />
       </Routes>
+      <Toaster/>
      </div>
    </>
   )
