@@ -23,4 +23,34 @@ export const signup = async(req, res) => {
         res.status(500)
         .json({message:"Internal server error"})
     }
+};
+
+export const login = async(req,res) => {
+    try {
+        const {email,password} = req.body;
+        const user = await User.findOne({email})
+        const isMatch = await bcryptjs.compare(password,user.password)
+        if (!user || !isMatch) {
+            res.status(400)
+            .json({
+                message:"Invalid user or password"
+            })
+        } else {
+            res.status(200)
+            .json({
+                message:"Login successfully",
+                user:{
+                    _id:user._id,
+                    name:user.name,
+                    email:user.email
+                }
+            })
+        }
+    } catch (error) {
+        console.log("Error",error);
+        res.status(500)
+        .json({
+            message:"Internal server error"
+        })
+    }
 }
