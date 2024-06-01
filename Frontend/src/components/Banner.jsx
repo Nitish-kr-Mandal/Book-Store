@@ -1,5 +1,6 @@
 import React from 'react'
 import banner from '../assets/banner.jpg'
+import { Link } from 'react-router-dom'
 
 function Banner() {
   return (
@@ -19,7 +20,8 @@ function Banner() {
         placeholder="Enter your Email" />
         </label>
         </div>
-        <button className="btn mt-6 btn-secondary">Secondary</button>
+        <Link to={"/course"}
+        className="btn mt-6 btn-secondary">Get started</Link>
     </div>
 
     <div className='w-full md:h-1/2 order-1 md:mx-2'>
